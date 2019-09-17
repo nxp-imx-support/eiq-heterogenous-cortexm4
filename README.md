@@ -10,10 +10,10 @@ Dependencies
 ===================
 CMSIS-NN -> https://github.com/ARM-software/CMSIS_5
 MCU SDK version 2.6.0 (SDK_2.6.0_EVK-MIMX8MM-ARMGCC):
-    - OS: Linux, Toolchain: GCC ARM Embedded
-    - Components: Amazon-FreeRTOS, CMSIS DSP Library, multicore
-    - SDK Version: 2.6.0 (2019-06-14)
-    - SDK Tag: REL_2.6.0_REL10_RFP_RC3_4
+- OS: Linux, Toolchain: GCC ARM Embedded
+- Components: Amazon-FreeRTOS, CMSIS DSP Library, multicore
+- SDK Version: 2.6.0 (2019-06-14)
+- SDK Tag: REL_2.6.0_REL10_RFP_RC3_4
 
 Toolchain supported
 ===================
@@ -47,6 +47,7 @@ Prepare the Demo
 5.  After running the demo.bin, using the "boot" command to boot the kernel on the A core terminal;
 6.  After the kernel is boot, using "root" to login.
 7.  After login, make sure imx_rpmsg_pingpong kernel module is inserted (lsmod) or insert it (modprobe imx_rpmsg_pingpong).
+
 Running the demo
 ================
 u-boot=>fatload mmc 0 0x80000000 eiq-kws.bin
