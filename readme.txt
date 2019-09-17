@@ -24,7 +24,6 @@ Hardware requirements
 =====================
 - Micro USB cable
 - MIMX8MM6-EVK  board
-- J-Link Debug Probe
 - 12V power supply
 - Personal Computer
 - 60 Pins Header
@@ -50,6 +49,9 @@ Prepare the Demo
 7.  After login, make sure imx_rpmsg_pingpong kernel module is inserted (lsmod) or insert it (modprobe imx_rpmsg_pingpong).
 Running the demo
 ================
+u-boot=>fatload mmc 0 0x80000000 eiq-kws.bin
+u-boot=>dcache flush
+u-boot=>bootaux 0x80000000
 
 After the boot process succeeds, the ARM Cortex-M4 terminal displays the following information:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -64,14 +66,6 @@ Nameservice announce sent.
 After the Linux RPMsg pingpong module was installed, the ARM Cortex-M4 terminal displays the following information:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Looping forever...
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The Cortex-A terminal displays the following information:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-get 1 (src: 0x1e)
-get 3 (src: 0x1e)
-......
-get 99 (src: 0x1e)
-get 101 (src: 0x1e)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Customization options
-=====================
+Waiting for ping...
+Sending pong...
+96% go
