@@ -50,9 +50,11 @@ Prepare the Demo
 
 Running the demo
 ================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 u-boot=>fatload mmc 0 0x80000000 eiq-kws.bin
 u-boot=>dcache flush
 u-boot=>bootaux 0x80000000
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After the boot process succeeds, the ARM Cortex-M4 terminal displays the following information:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -70,3 +72,4 @@ Looping forever...
 Waiting for ping...
 Sending pong...
 96% go
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
